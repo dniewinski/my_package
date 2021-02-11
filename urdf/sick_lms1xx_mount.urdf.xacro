@@ -53,6 +53,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       <child link="${prefix}_laser" />
     </joint>
 
+    <!-- This link didn't exis, but it is listed as the child of the joint above -->
+    <link name="${prefix}_laser" />
+
     <gazebo reference="${prefix}_laser_mount">
       <material>Gazebo/DarkGrey</material>
     </gazebo>

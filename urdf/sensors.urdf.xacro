@@ -8,7 +8,7 @@
   <!-- Front LiDAR  -->
 
   <xacro:include filename="$(find my_package)/urdf/sick_lms1xx_mount.urdf.xacro" />
-  <sick_lms1xx_mount prefix="$(optenv JACKAL_LASER_MOUNT front)"
+  <xacro:sick_lms1xx_mount prefix="$(optenv JACKAL_LASER_MOUNT front)"
                      topic="$(optenv JACKAL_LASER_TOPIC /front_lidar_scan)"/>
 
   <joint name="$(optenv JACKAL_LASER_MOUNT front)_laser_mount_joint" type="fixed">
@@ -20,8 +20,9 @@
 
   <!-- Rear LiDAR  -->
 
-  <xacro:include filename="$(find my_package)/urdf/sick_lms1xx_mount.urdf.xacro" />
-  <sick_lms1xx_mount prefix="$(optenv JACKAL_LASER_MOUNT rear)"
+  <!-- Removed.  Included above already -->
+  <!-- xacro:include filename="$(find my_package)/urdf/sick_lms1xx_mount.urdf.xacro" / -->
+  <xacro:sick_lms1xx_mount prefix="$(optenv JACKAL_LASER_MOUNT rear)"
                      topic="$(optenv JACKAL_LASER_TOPIC /rear_lidar_scan)"/>
 
   <joint name="$(optenv JACKAL_LASER_MOUNT rear)_laser_mount_joint" type="fixed">
